@@ -15,6 +15,7 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = [ "FullStack Developer", "Web Developer", "Software Engineer" ];
   const period = 2000;
+  const intro = "Innovative and results-driven, I specialize in developing seamless web and cross-platform applications, robust backend systems, and scalable APIs. With expertise in modern frameworks like React, .NET, and ASP.NET Core, I am committed to enhancing user experiences, optimizing performance, and delivering reliable software solutions. My technical skillset includes proficiency in JavaScript/TypeScript, C#, and DevOps tools such as Azure CI/CD Pipelines and Service Bus. Whether crafting marketing tools, implementing cloud-based backend services, or maintaining clean and efficient codebases, I am passionate about pushing boundaries and achieving impactful results. Let's build the future together!";
 
   useEffect(() =>{
 
@@ -59,9 +60,9 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Ryan`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h2>{`Hi! I'm Ryan, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h2>
+                  <p>{intro}</p>
+                  <button onClick={() => window.open('https://www.linkedin.com/in/ryan-wang1120', '_blank', 'noopener,noreferrer')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
