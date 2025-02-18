@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/api.png";
-import projImg2 from "../assets/img/schema.png";
-import projImg3 from "../assets/img/snapshot.png";
+import projImg1 from "../assets/img/api_sized.png";
+import projImg2 from "../assets/img/schema_sized.png";
+import projImg3 from "../assets/img/snapshot_sized.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import TrackVisibility from 'react-on-screen';
 
@@ -15,12 +15,12 @@ export const Projects = () => {
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Database Schemas",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "Project Structure Snapshot",
       description: "Design & Development",
       imgUrl: projImg3,
     },
@@ -37,7 +37,7 @@ export const Projects = () => {
                 <h2>Projects</h2>
                 <p>Here are some key projects that showcase my expertise in full-stack development, cloud computing, and scalable system design.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center w-100" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">User & Media API</Nav.Link>
                     </Nav.Item>

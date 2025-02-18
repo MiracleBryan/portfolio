@@ -32,9 +32,13 @@ router.post("/contact", (req, res) => {
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
+  console.log("name:" + name);
+  console.log("email:" + email);
+  console.log("message:" + message);
+  console.log("phone:" + phone);
   const mail = {
-    from: name,
-    to: "ryan.wang@gmail.com",
+    from: "shaobo.miracle@gmail.com",
+    to: "qwer1643782914@gmail.com",
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
             <p>Email: ${email}</p>
@@ -44,8 +48,10 @@ router.post("/contact", (req, res) => {
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       res.json(error);
+      console.log('error:'+{error});
     } else {
       res.json({ code: 200, status: "Message Sent" });
+      console.log('Successfully sended:');
     }
   });
 });
